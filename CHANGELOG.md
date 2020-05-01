@@ -1,4 +1,7 @@
 0.10.1 - July 5, 2017
+* ios: upgraded ADAL native SDK version 
+
+0.10.1 - July 5, 2017
 * windows: added compatibility with VS2017
 * android: upgraded ADAL native SDK version to 1.12.0 
 
