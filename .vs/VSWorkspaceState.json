@@ -1,0 +1,11 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\src",
+    "\\src\\ios",
+    "\\src\\ios\\ADAL.framework",
+    "\\src\\ios\\ADAL.framework\\Headers"
+  ],
+  "SelectedNode": "\\src\\ios\\ADAL.framework\\Headers\\ADAuthenticationContext.h",
+  "PreviewInSolutionExplorer": false
+}
