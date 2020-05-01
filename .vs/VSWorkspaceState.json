@@ -6,6 +6,6 @@
     "\\src\\ios\\ADAL.framework",
     "\\src\\ios\\ADAL.framework\\Headers"
   ],
-  "SelectedNode": "\\src\\ios\\ADAL.framework\\Headers\\ADAuthenticationContext.h",
+  "SelectedNode": "\\src\\ios\\ADAL.framework\\Headers\\ADAL.h",
   "PreviewInSolutionExplorer": false
 }
