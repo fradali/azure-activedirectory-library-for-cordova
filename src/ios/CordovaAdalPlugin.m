@@ -66,7 +66,8 @@
                  clientId:clientId
                  redirectUri:redirectUri
                  promptBehavior:AD_PROMPT_ALWAYS
-                 userIdentifier:[ADUserIdentifier identifierWithId:userId]
+                 //userIdentifier:[ADUserIdentifier identifierWithId:userId]
+                 userId:userId
                  extraQueryParameters:extraQueryParameters
                  // claims: claims
                  completionBlock:^(ADAuthenticationResult *result) {
