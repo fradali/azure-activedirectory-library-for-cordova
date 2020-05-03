@@ -4,11 +4,10 @@
  * See License in the project root for license information.
  ******************************************************************************/
 
-
-#import <ADAL/ADAL.h>
-
 #import "CordovaAdalPlugin.h"
 #import "CordovaAdalUtils.h"
+
+#import <ADAL/ADAL.h>
 
 @implementation CordovaAdalPlugin
 
@@ -48,7 +47,6 @@
             NSURL *redirectUri = [NSURL URLWithString:[command.arguments objectAtIndex:4]];
             NSString *userId = ObjectOrNil([command.arguments objectAtIndex:5]);
             NSString *extraQueryParameters = ObjectOrNil([command.arguments objectAtIndex:6]);
-            // NSString *claims = ObjectOrNil([command.arguments objectAtIndex:7]);
 
             ADAuthenticationContext *authContext = [CordovaAdalPlugin getOrCreateAuthContext:authority
                                                                            validateAuthority:validateAuthority];
@@ -66,10 +64,8 @@
                  clientId:clientId
                  redirectUri:redirectUri
                  promptBehavior:AD_PROMPT_ALWAYS
-                 //userIdentifier:[ADUserIdentifier identifierWithId:userId]
                  userId:userId
                  extraQueryParameters:extraQueryParameters
-                 // claims: claims
                  completionBlock:^(ADAuthenticationResult *result) {
 
                      NSMutableDictionary *msg = [CordovaAdalUtils ADAuthenticationResultToDictionary: result];
