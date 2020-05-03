@@ -28,7 +28,7 @@
 @class ADTokenCacheItem;
 @class ADUserInformation;
 @class ADUserIdentifier;
-@class UIViewController;
+@class WKWebView;
 @class ADTokenCache;
 
 #if !TARGET_OS_IPHONE
@@ -123,11 +123,6 @@ typedef enum
     BOOL _extendedLifetimeEnabled;
     NSString* _logComponent;
     NSUUID* _correlationId;
-#if __has_feature(objc_arc)
-    __weak WebViewType* _webView;
-#else 
-    WebViewType* _webView;
-#endif
 }
 
 #if TARGET_OS_IPHONE
@@ -268,10 +263,18 @@ typedef enum
 
 /*! Gets or sets the webview, which will be used for the credentials. If nil, the library will create a webview object
  when needed, leveraging the parentController property. */
-@property (weak) WebViewType* webView;
+@property (weak) WKWebView* webView;
+
 
 /*! Enable to return access token with extended lifetime during server outage. */
 @property BOOL extendedLifetimeEnabled;
+
+	
+/*!
+    List of additional ESTS features that client handles.
+ */
+@property (strong) NSArray<NSString *> *clientCapabilities;
+
 
 /*! Follows the OAuth2 protocol (RFC 6749). The function will first look at the cache and automatically check for token
  expiration. Additionally, if no suitable access token is found in the cache, but refresh token is available,
