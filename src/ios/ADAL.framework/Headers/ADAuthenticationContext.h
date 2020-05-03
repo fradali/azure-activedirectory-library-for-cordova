@@ -123,11 +123,11 @@ typedef enum
     BOOL _extendedLifetimeEnabled;
     NSString* _logComponent;
     NSUUID* _correlationId;
-    #if __has_feature(objc_arc)
+    /*#if __has_feature(objc_arc)
     __weak WKWebView* _webView;
     #else 
     WKWebView* _webView;
-    #endif
+    #endif*/
 }
 
 #if TARGET_OS_IPHONE
